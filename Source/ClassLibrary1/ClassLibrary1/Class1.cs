@@ -8,7 +8,10 @@ namespace ClassLibrary1
 {
     public class Class1
     {
-        int a = 1;
-        Console.WriteLine(a.ToString());
+        public Class1()
+        {
+            int a = 1;
+            Console.WriteLine(a.ToString());
+        }
     }
 }
