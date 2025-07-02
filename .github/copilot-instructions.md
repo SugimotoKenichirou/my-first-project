@@ -23,7 +23,7 @@
  sql = "SELECT 列リスト FROM ターブル名 " + DAC.WithNoLock() + " WHERE句";
 ```
 
-### ROW ROCKについて
+### ROW LOCKについて
 ### TABLE LOCKについて
 
 ## INDEX HINTの記載方法について
