@@ -15,12 +15,20 @@
 <!-- フレームワーク・ライブラリの使い方、設計原則 -->
 ## ISNULLの対応について
 
+``` c#
+ sql = "SELECT " + QueryWrapper.AddIsNull() + "(列名, ' ') 列別名, 列リスト FROM ターブル名 " + QueryWrapper.WithNoLock() + " WHERE句";
+```
+
+``` c#
+ sql = "SELECT " + QueryWrapper.AddIsNull() + "(列名, 0) 列別名, 列リスト FROM ターブル名 " + QueryWrapper.WithNoLock() + " WHERE句";
+```
+
 ## LOCK HINTの記載方法について
 
 ### NOLOCK HINTについて
 
 ``` c#
- sql = "SELECT 列リスト FROM ターブル名 " + DAC.WithNoLock() + " WHERE句";
+ sql = "SELECT 列リスト FROM ターブル名 " + QueryWrapper.WithNoLock() + " WHERE句";
 ```
 
 ### ROW LOCKについて
